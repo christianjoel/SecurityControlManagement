@@ -1,0 +1,44 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Default screen margins, per the Android Design guidelines. -->
+
+    <dimen name="search_icon_padding">12dp</dimen>
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+
+    <dimen name="alerter_padding_small">4dp</dimen>
+    <dimen name="alerter_padding_half">8dp</dimen>
+    <dimen name="alerter_padding_default">16dp</dimen>
+    <dimen name="alerter_alert_padding">30dp</dimen>
+    <dimen name="alerter_alert_negative_margin_top">-32dp</dimen>
+
+    <!--Alerts-->
+
+
+    <dimen name="alerter_alert_icn_size">38dp</dimen>
+    <dimen name="alerter_alert_progress_size">32dp</dimen>
+
+    <!--Text sizes-->
+
+
+    <dimen name="alerter_text_small">14sp</dimen>
+    <dimen name="alerter_text_medium">18sp</dimen>
+    <dimen name="alerter_alert_view_padding_top">50dp</dimen>
+
+
+    <dimen name="thumb_width">30dp</dimen>
+    <dimen name="thumb_height">30dp</dimen>
+
+    <dimen name="otp_view_item_size">48dp</dimen>
+    <dimen name="otp_view_item_spacing">5dp</dimen>
+    <dimen name="otp_view_item_line_width">2dp</dimen>
+    <dimen name="otp_view_cursor_width">2dp</dimen>
+
+    <dimen name="bottom_navigation_icon_size" tools:override="true">20dp</dimen>
+    <dimen name="design_bottom_navigation_height" tools:override="true">56dp</dimen>
+
+    <dimen name="design_bottom_navigation_text_size" tools:override="true">10sp</dimen>
+    <dimen name="design_bottom_navigation_active_text_size" tools:override="true">10sp</dimen>
+
+
+</resources>

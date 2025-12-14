@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.Scm" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowBackground">@color/white</item>
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/color_500</item>
+        <item name="colorPrimaryVariant">@color/black</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorAccent">@color/color_500</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/color_500</item>
+        <item name="colorSecondaryVariant">@color/color_700</item>
+        <item name="colorOnSecondary">@color/color_700</item>
+        <!-- Status bar color. -->
+        <item name="android:textSize">13sp</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <style name="SplashTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_screen_background</item>
+        <item name="android:windowTranslucentStatus">true</item>
+
+        <item name="colorControlActivated">@color/color_500</item>
+
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <style name="Theme.Scm.LoginTheme">
+        <item name="android:windowBackground">@color/white</item>
+        <item name="colorPrimary">@color/color_500</item>
+        <item name="colorPrimaryVariant">@color/white</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorAccent">@color/color_500</item>
+
+        <item name="android:textColorPrimary">@color/text_color</item>
+        <item name="android:textColorSecondary">@color/text_color</item>
+        <item name="android:textColor">@color/text_color</item>
+
+        <item name="android:statusBarColor">@color/color_500</item>
+        <item name="android:windowLightStatusBar">false</item>
+
+        <item name="colorControlHighlight">@color/color_500</item>
+
+    </style>
+
+    <style name="Theme.Scm.Introtheme">
+        <item name="android:windowBackground">@color/lay_back</item>
+        <item name="colorPrimary">@color/color_500</item>
+        <item name="colorPrimaryVariant">@color/white</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorAccent">@color/color_500</item>
+
+        <item name="android:textColorPrimary">@color/text_color</item>
+        <item name="android:textColorSecondary">@color/text_color</item>
+        <item name="android:textColor">@color/text_color</item>
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="colorControlHighlight">@color/color_500</item>
+
+    </style>
+
+    <style name="Theme.Scm.NoActionBar">
+        <item name="android:windowBackground">@color/lay_back</item>
+        <item name="colorPrimary">@color/color_500</item>
+        <item name="colorPrimaryVariant">@color/white</item>
+        <item name="colorOnPrimary">@color/text_color</item>
+        <item name="colorPrimaryDark">@color/text_color</item>
+        <item name="colorAccent">@color/color_500</item>
+        <item name="textColor">@color/text_color</item>
+        <item name="android:textColor">@color/black</item>
+
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/color_200</item>
+        <item name="colorSecondaryVariant">@color/color_700</item>
+        <item name="colorOnSecondary">@color/color_700</item>
+        <!-- Status bar color. -->
+        <item name="android:textColorPrimary">@color/text_color</item>
+        <item name="android:textColorSecondary">@color/text_color</item>
+        <item name="actionMenuTextColor">@color/text_color</item>
+        <!--To change the background of options menu-->
+        <item name="popupMenuBackground">@color/white</item>
+
+        <item name="android:textSize">13sp</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowContentTransitions">true</item>
+
+        <item name="android:statusBarColor">@color/color_500</item>
+        <item name="android:windowLightStatusBar">false</item>
+
+    </style>
+
+    <style name="AlertTheme" parent="Base.Theme.MaterialComponents">
+        <item name="colorPrimary">@color/color_500</item>
+        <item name="colorPrimaryVariant">@color/white</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorAccent">@color/color_500</item>
+
+        <item name="textColor">@color/text_color</item>
+
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="android:textColorSecondary">@color/black</item>
+        <item name="android:textColor">@color/black</item>
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@color/white</item>
+
+        <item name="alertStyle">@style/AlertStyle</item>
+
+        <item name="android:windowEnterAnimation">@anim/anim_in</item>
+        <item name="android:windowExitAnimation">@anim/anim_out</item>
+
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar">
+        <item name="colorControlHighlight">@color/color_500</item>
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.MaterialComponents.Light">
+        <item name="colorControlHighlight">@color/color_500</item>
+    </style>
+
+
+    <style name="ToolbarColoredBackArrow" parent="Theme.Scm.NoActionBar">
+        <item name="android:textColorSecondary">@color/black</item>
+    </style>
+
+
+    <!--Alerter-->
+
+
+    <style name="AlertStyle" parent="@android:style/Widget" />
+
+    <style name="AlertTextAppearance">
+        <item name="android:textColor">@color/alert_default_text_color</item>
+    </style>
+
+    <style name="AlertTextAppearance.Title">
+        <item name="android:textSize">@dimen/alerter_text_medium</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AlertTextAppearance.Text">
+        <item name="android:textSize">@dimen/alerter_text_small</item>
+    </style>
+
+    <style name="AlertButton" parent="@style/Widget.AppCompat.Button.Colored" />
+
+    <style name="SearchViewIcon">
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+        <item name="android:paddingLeft">@dimen/search_icon_padding</item>
+        <item name="android:paddingRight">@dimen/search_icon_padding</item>
+        <item name="android:scaleType">center</item>
+        <item name="android:alpha">0.54</item>
+
+    </style>
+
+    <style name="Theme_Dialog" parent="android:Theme.Holo.Dialog">
+        <item name="android:windowMinWidthMajor">90%</item>
+        <item name="android:windowMinWidthMinor">90%</item>
+    </style>
+
+    <style name="webview" parent="Theme.Scm.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">false</item>
+    </style>
+
+    <style name="BottomNavigationView" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="BottomNavigationView.Active" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">11sp</item>
+    </style>
+</resources>
