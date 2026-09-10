@@ -18,12 +18,21 @@ import androidx.core.content.ContextCompat
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.scm.ui.main.MainViewModel
 import com.example.scm.ui.main.TaskFlowApp
+import com.google.android.play.core.appupdate.AppUpdateManager
+import com.google.android.play.core.appupdate.AppUpdateManagerFactory
+import com.google.android.play.core.install.model.AppUpdateType
+import com.google.android.play.core.install.model.UpdateAvailability
 
 class MainActivity : ComponentActivity() {
     private var viewModelRef: MainViewModel? = null
+    private lateinit var appUpdateManager: AppUpdateManager
+    private val UPDATE_REQUEST_CODE = 1234
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        appUpdateManager = AppUpdateManagerFactory.create(this)
+        checkForAppUpdate()
+
         val taskId = intent?.getStringExtra("TASK_ID")
 
         setContent {
@@ -57,6 +66,41 @@ class MainActivity : ComponentActivity() {
                     }
                 }
                 TaskFlowApp(viewModel = viewModel)
+            }
+        }
+    }
+
+    @Suppress("DEPRECATION")
+    private fun checkForAppUpdate() {
+        appUpdateManager.appUpdateInfo.addOnSuccessListener { appUpdateInfo ->
+            if (appUpdateInfo.updateAvailability() == UpdateAvailability.UPDATE_AVAILABLE
+                && appUpdateInfo.isUpdateTypeAllowed(AppUpdateType.IMMEDIATE)
+            ) {
+                try {
+                    appUpdateManager.startUpdateFlowForResult(
+                        appUpdateInfo,
+                        AppUpdateType.IMMEDIATE,
+                        this,
+                        UPDATE_REQUEST_CODE
+                    )
+                } catch (_: Exception) {}
+            }
+        }
+    }
+
+    @Suppress("DEPRECATION")
+    override fun onResume() {
+        super.onResume()
+        appUpdateManager.appUpdateInfo.addOnSuccessListener { appUpdateInfo ->
+            if (appUpdateInfo.updateAvailability() == UpdateAvailability.DEVELOPER_TRIGGERED_UPDATE_IN_PROGRESS) {
+                try {
+                    appUpdateManager.startUpdateFlowForResult(
+                        appUpdateInfo,
+                        AppUpdateType.IMMEDIATE,
+                        this,
+                        UPDATE_REQUEST_CODE
+                    )
+                } catch (_: Exception) {}
             }
         }
     }
