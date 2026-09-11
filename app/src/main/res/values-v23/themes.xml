@@ -14,7 +14,8 @@
         <item name="colorOnSecondary">@color/color_700</item>
         <!-- Status bar color. -->
         <item name="android:textSize">13sp</item>
-        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
     </style>
 
     <style name="SplashTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
@@ -97,8 +98,8 @@
         <item name="windowNoTitle">true</item>
         <item name="android:windowContentTransitions">true</item>
 
-        <item name="android:statusBarColor">@color/color_500</item>
-        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
 
     </style>
 
