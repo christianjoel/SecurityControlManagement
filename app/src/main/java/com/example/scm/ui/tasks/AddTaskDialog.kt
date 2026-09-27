@@ -34,27 +34,45 @@ fun AddTaskDialog(
                 OutlinedTextField(
                     value = title,
                     onValueChange = { title = it },
-                    label = { Text("Task Title (e.g. Task/Groceries)") },
+                    label = { Text("Task Title (e.g. Groceries)") },
                     modifier = Modifier.fillMaxWidth()
                 )
                 OutlinedTextField(
                     value = description,
                     onValueChange = { description = it },
                     label = { Text("Description") },
-                    modifier = Modifier.fillMaxWidth()
+                    modifier = Modifier.fillMaxWidth(),
+                    minLines = 2
                 )
-                OutlinedTextField(
-                    value = priority,
-                    onValueChange = { priority = it },
-                    label = { Text("Priority (High / Medium / Normal)") },
+
+                Text("Priority", fontWeight = FontWeight.Bold, fontSize = 14.sp)
+                Row(
+                    horizontalArrangement = Arrangement.spacedBy(8.dp),
                     modifier = Modifier.fillMaxWidth()
-                )
-                OutlinedTextField(
-                    value = category,
-                    onValueChange = { category = it },
-                    label = { Text("Category (Work / Personal / Routine)") },
+                ) {
+                    listOf("High", "Medium", "Normal").forEach { p ->
+                        FilterChip(
+                            selected = priority == p,
+                            onClick = { priority = p },
+                            label = { Text(p) }
+                        )
+                    }
+                }
+
+                Text("Category", fontWeight = FontWeight.Bold, fontSize = 14.sp)
+                Row(
+                    horizontalArrangement = Arrangement.spacedBy(8.dp),
                     modifier = Modifier.fillMaxWidth()
-                )
+                ) {
+                    listOf("Work", "Personal", "Routine").forEach { c ->
+                        FilterChip(
+                            selected = category == c,
+                            onClick = { category = c },
+                            label = { Text(c) }
+                        )
+                    }
+                }
+
                 Spacer(modifier = Modifier.height(4.dp))
                 Row(
                     verticalAlignment = Alignment.CenterVertically,

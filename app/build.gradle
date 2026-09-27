@@ -9,14 +9,14 @@ plugins {
 
 android {
     namespace = "com.example.scm"
-    compileSdk = 36
+    compileSdk = 37
 
     defaultConfig {
         applicationId = "com.innoppl.myapplication"
         minSdk = 26
-        targetSdk = 36
-        versionCode = 7
-        versionName = "1.6"
+        targetSdk = 37
+        versionCode = 8
+        versionName = "1.7"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
